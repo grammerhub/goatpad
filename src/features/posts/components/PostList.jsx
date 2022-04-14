@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useCollection } from '../../../hooks/useCollection'
+import { useCollection } from '../../../hooks/collection/useCollection'
 
 import { Stack } from '../../../components/styles/Stack.styled'
 

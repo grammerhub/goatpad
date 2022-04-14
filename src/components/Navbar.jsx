@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { useLogout } from '../hooks/useLogout'
+import { useLogout } from '../hooks/auth/useLogout'
 import { useAuthContext } from '../hooks/useAuthContext'
 
 const NavbarContainer = styled.div`
