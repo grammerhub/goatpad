@@ -1,13 +1,19 @@
 import React from 'react'
-
-import { useCollection } from '../../../hooks/collection/useCollection'
+import { usePostContext } from '../../../hooks/usePostContext'
+import { useGetCollection } from '../../../hooks/collection/useGetCollection'
 
 import { Stack } from '../../../components/styles/Stack.styled'
 
 import Post from './Post'
+import { useEffect } from 'react'
 
 const PostList = () => {
-  const { documents: posts } = useCollection('posts')
+  const { getCollection } = useGetCollection('posts')
+  const { posts } = usePostContext()
+
+  useEffect(() => {
+    getCollection()
+  })
 
   return (
     <Stack gutter='lg'>
